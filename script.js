@@ -114,6 +114,12 @@ function addBookToLib() {
               addBookToLocalStorage();
             }
           };
+          //remove book from book container
+          remove.onclick = function () {
+            divBook.remove();
+            myLib.splice(0, 1);
+            addBookToLocalStorage();
+          };
           //close modal
           closeModal();
         }
