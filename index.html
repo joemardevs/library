@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="icon.png" type="image/x-icon">
+</head>
+
+<body>
+    <header>
+        <h1><a href="index.html">library</a></h1>
+        <a href="#"><i class="fa-brands fa-xl fa-dev"></i></a>
+    </header>
+
+    <!-- Button trigger modal -->
+    <div class="new-book">
+        <div class="desc animate__animated animate__bounceIn">
+            <p>This is a simple library app where you can add and delete books, change book status, see basic
+                information and library statistics.</p>
+            <p><i class="fas fa-exclamation-triangle"></i>This app is a demo, all data is stored in localStorage.</p>
+        </div>
+        <button type="button" class="btn animate__animated animate__swing" data-bs-toggle="modal"
+            data-bs-target="#exampleModal">
+            <i class="fa-solid fa-plus"></i>
+            New Book
+        </button>
+
+
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade bd-example-modal-sm" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-sm">
+            <form class="modal-content" id="form">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Add New Book</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="container">
+                        <input type="text" id="myInput" class="book-title-input input form-control" placeholder="Title"
+                            required>
+                        <p class="error-msg" id="errorMsg">This book
+                            already exists in your library</p>
+                        <input type="text" class="book-author-input input form-control" placeholder="Author" required>
+                        <input type="number" class="book-pages-input input form-control"
+                            placeholder="Pages(Numbers Only)" required>
+                        <div class="form-check form-switch">
+                            <label>Have you read it?</label>
+                            <input type="checkbox" class="isRead form-check-input">
+                        </div>
+                    </div>
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+                    <button type="submit" class="btn btn-success add-new-book ">Add</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="modal-backdrop fade show" id="backdrop" style="display: none;"></div>
+
+    <div class="book-container">
+    </div>
+    <footer>
+        <p>Copyright ©
+            <script>
+                document.write(new Date().getFullYear())
+            </script> Joemar
+            <a href="#" target="_blank"><i class="fa-brands fa-github fa-xl"></i></a>
+        </p>
+    </footer>
+
+    <script src="script.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+        crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+</body>
+
+</html>

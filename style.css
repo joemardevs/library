@@ -1,0 +1,243 @@
+
+/* header */
+header{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 0 20px 1px #b5b5b5;
+}
+header h1{
+    font-weight: 700;
+    font-family: Pacifico,sans-serif;
+}
+header a{
+    text-decoration: none;
+    color: black;
+}
+header .fa-dev{
+    padding: 2rem;
+}
+header .fa-dev:hover {
+	animation: rotate-center 0.5s ease-in-out both;
+}
+@keyframes rotate-center {
+    0% {
+      transform: rotate(0);
+    }
+    100% {
+      transform: rotate(-360deg);
+    }
+  }
+/* body */
+body{
+    background-color: #F0EEF1 !important;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+.new-book{
+    display: flex;
+    align-items: center;
+    
+    flex-direction: column;
+}
+.desc{
+    width: 50%;
+    text-align: center;
+    border: 1px solid #000;
+    border-radius: 10px;
+    padding: 20px;
+    margin-top: 2rem;
+}
+.new-book .btn{
+    padding: 20px 50px;
+    color: #000;
+    font-weight: 700;
+    margin-top: 2rem;
+    border: none;width: 200px;
+}
+.new-book .btn:hover{
+    background-color: #DCDCDC !important;
+}
+.book-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 50px;
+    margin-top: 3rem;
+    width: 100%;
+    flex-grow: 1;
+}
+.book{
+    background-color: #fff;
+    box-shadow: 0 0 25px 1px #b5b5b5;
+    height: 300px;
+    width: 250px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    border-radius: 10px;
+    padding: 20px;
+}
+.book-title, .book-author ,.book-pages{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 3px;
+    font-weight: 500;
+    height: 2.5rem;
+}
+
+/* hide scroll on number input */
+/* Chrome, Safari, Edge, Opera */
+.book-pages-input::-webkit-outer-spin-button,
+.book-pages-input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.book .read{
+    width: 100%;
+    height: 2.5rem;
+    border-radius: 3px;
+    background-color: #9FFF9C;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    font-weight: 500;
+    border: none;
+}
+.book .not-read{
+    width: 100%;
+    height: 2.5rem;
+    border-radius: 3px;
+    background-color: #FF9C9C;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    font-weight: 500;
+    border: none;
+}
+.delete{
+    background-color: #DCDCDC;
+    color: #000;
+    height: 2.5rem;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    border: none;
+    border-radius: 3px;
+    font-weight: 500;
+}
+.delete:hover{
+    background-color: #C0C0C0;
+}
+/* container */
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+.book-title-input, .book-author-input, .book-pages-input{
+    width: 200px !important;
+    border-top-style: hidden !important;
+    border-right-style: hidden !important;
+    border-left-style: hidden !important;
+}
+input[type=text]:focus, input[type=number]:focus, input[type=checkbox]:focus {
+  box-shadow: none;
+}
+.container .input{
+    padding: 10px;
+    font-size: 1rem;
+}
+
+.form-check{
+    display: flex !important;
+    flex-direction: row;
+    align-items: center;
+    gap: 1rem;
+    padding: 0 !important;
+}
+.form-check input{
+    margin: 0 !important;
+}
+.form-check-input:checked{
+    background-color: green !important;
+    border-color: green !important;
+}
+.error-msg{
+    color: red;
+    font-size: .85rem;
+    width: 200px;
+    margin:0;
+    text-align: center;
+    display: none;
+}
+.error-msg.active{
+    display: block;
+}
+/* footer */
+footer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    width: 100%;
+    height: 3rem;
+    margin-top: 2.5rem;
+}
+footer p {
+    margin: 0;
+    font-weight: 500;
+}
+footer a{
+    text-decoration: none;
+    color: black;
+}
+footer .fa-github:hover{
+    animation:rotate-scale-up .4s linear both
+}
+
+ @keyframes rotate-scale-up{
+    0%{transform:scale(1) rotateZ(0)}
+    50%{transform:scale(1.3) rotateZ(180deg)}
+    100%{transform:scale(1) rotateZ(360deg)}
+}
+/* Phone */
+@media only screen and (max-width: 600px) {
+    header{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #fff;
+        padding: 10px;
+        box-shadow: 0 0 20px 1px #b5b5b5;
+    }
+    header .fa-dev{
+        display: none;
+    }
+    .desc{
+        width: 90%;
+        font-size: .8rem;
+        padding: 10px;
+        margin-top: 1rem;
+    }
+    .btn{
+        width: 100px;
+        height: 50px;
+        padding: 0 !important;
+        font-size: .8rem !important;
+        margin-top: 1rem !important;
+    }
+    footer p {
+        font-size: .7rem;
+    }
+}
