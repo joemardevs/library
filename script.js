@@ -18,7 +18,6 @@ class Book {
       (this.id = id = Date.now());
   }
 }
-const localStorageLibrary = new Library();
 //check if already read or not
 function checkRead() {
   return isRead.checked;
